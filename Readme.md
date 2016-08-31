@@ -9,7 +9,7 @@ Generated project characteristics
 ---------------------------------
 
 No-xml Spring MVC 4 web application
-Vaadin
+Vaadin 7.6.3
 
 Prerequisites
 -------------
@@ -34,7 +34,7 @@ Run the project
 
 Navigate to newly created project directory (my-artifactId) and then run:
 
-    mvn -DskpiTests compile gwt:compile tomcat7:run-war -P default
+    mvn -DskpiTests compile vaadin:compile-theme vaadin:compile tomcat7:run-war
     
 Test in the browser
 -------------------
@@ -43,9 +43,9 @@ http://localhost:8080/my-artifactId
 
 Implementation details
 ----------------------
-For the client side the eventbus architecture has been used to allow component decoupling.
+For the UI a basic eventbus architecture has been implemented (taking GWT as model) to allow component decoupling.
  
-For the server side the components are managed by the Spring framework.
+The components are managed by the Spring framework.
 
 About the container
 -------------------

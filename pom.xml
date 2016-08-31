@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.cardosi</groupId>
-    <artifactId>gwt-spring-archetype</artifactId>
+    <artifactId>vaadin-spring-archetype</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
@@ -40,7 +40,7 @@
                     <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory> <!-- matches distribution management repository url above -->
                     <branch>refs/heads/mvn-repo</branch>                       <!-- remote branch name -->
                     <includes><include>**/*</include></includes>
-                    <repositoryName>gwt-spring-archetype</repositoryName>      <!-- github repo name -->
+                    <repositoryName>vaadin-spring-archetype</repositoryName>      <!-- github repo name -->
                     <repositoryOwner>gitgabrio</repositoryOwner>    <!-- github username  -->
                 </configuration>
                 <executions>
