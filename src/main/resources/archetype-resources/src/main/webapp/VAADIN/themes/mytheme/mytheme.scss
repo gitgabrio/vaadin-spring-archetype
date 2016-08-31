@@ -1,0 +1,96 @@
+// Global variable overrides. Must be declared before importing Valo.
+// Defines the plaintext font size, weight and family. Font size affects general component sizing.
+//$v-font-size: 16px;
+//$v-font-weight: 300;
+//$v-font-family: "Open Sans", sans-serif;
+// Defines the border used by all components.
+//$v-border: 1px solid (v-shade 0.7);
+//$v-border-radius: 4px;
+// Affects the color of some component elements, e.g Button, Panel title, etc
+//$v-background-color: hsl(210, 0%, 98%);
+// Affects the color of content areas, e.g  Panel and Window content, TextField input etc
+//$v-app-background-color: $v-background-color;
+// Affects the visual appearance of all components
+//$v-gradient: v-linear 8%;
+//$v-bevel-depth: 30%;
+//$v-shadow-opacity: 5%;
+// Defines colors for indicating status (focus, success, failure)
+//$v-focus-color: valo-focus-color(); // Calculates a suitable color automatically
+//$v-friendly-color: #2c9720;
+//$v-error-indicator-color: #ed473b;
+// For more information, see: https://vaadin.com/book/-/page/themes.valo.html
+// Example variants can be copy/pasted from https://vaadin.com/wiki/-/wiki/Main/Valo+Examples
+@import "../valo/valo.scss";
+
+@mixin mytheme {
+  @include valo;
+
+  // Insert your own theme rules here
+  //.csstag {
+  //  border-style: solid;
+  //  border-color: black;
+  //  border-width: 1px;
+  //  padding: 5px;
+  //  box-shadow: 0 0 0 1px rgba(0, 0, 0, .2);
+  //  outline: 1px dashed #000;
+  //  outline-color: rgba(0,0,0,.2);
+  //}
+
+  //.v-gridlayout-slot {
+  //  height: 50px;
+  //  width: 50px;
+  //}
+
+  .v-layout.outlined {
+    outline: 1px dashed #000;
+    outline-color: rgba(0,0,0,.2);
+  }
+
+  .v-layout.outlined > .v-slot,
+  .v-layout.outlined > .v-expand > .v-slot,
+  .v-layout.outlined .v-gridlayout-slot {
+    outline: 1px solid #000;
+    outline-color: rgba(0,0,0,.2);
+  }
+
+  /*Due to a ff bug we use box-shadow insted of outlines on firefox*/
+  .v-ff .v-layout.outlined,
+  .v-ff .v-layout.outlined > .v-slot,
+  .v-ff .v-layout.outlined > .v-expand > .v-slot,
+  .v-ff .v-layout.outlined .v-gridlayout-slot,
+  .v-ff .v-layout.outlined .v-absolutelayout-wrapper {
+    outline: none;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 0 0 1px rgba(0,0,0,.2);
+  }
+
+
+
+  .adv {
+    background-color: purple;
+    border: 1px solid red;
+    height: 50px;
+    width: 50px;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    left: 0px;
+    top: 0px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+  }
+
+  .chooser {
+    background-color: gray;
+    border: 1px solid blue;
+    height: 50px;
+    width: 400px;
+    padding: 0px 0px;
+  }
+
+  .v-gridlayout-slot {
+    background-color: purple;
+  }
+}
+
+
