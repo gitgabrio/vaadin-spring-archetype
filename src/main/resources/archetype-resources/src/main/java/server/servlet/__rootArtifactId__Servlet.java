@@ -11,10 +11,10 @@ import javax.servlet.annotation.WebServlet;
 
 
 /**
- * The type <code>VaadinSpringModelServlet</code>.
+ * The type <code>${artifactId}Servlet</code>.
  */
-@WebServlet(urlPatterns = "/*", name = "VaadinSpringModelServlet", asyncSupported = true)
+@WebServlet(urlPatterns = "/*", name = "${artifactId}Servlet", asyncSupported = true)
 @VaadinServletConfiguration(ui = Main.class, productionMode = false)
-public class VaadinSpringModelServlet extends SpringVaadinServlet {
+public class ${artifactId}Servlet extends SpringVaadinServlet {
 
 }

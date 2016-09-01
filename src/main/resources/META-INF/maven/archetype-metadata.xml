@@ -38,42 +38,22 @@
       </includes>
     </fileSet>
     <fileSet filtered="true" encoding="UTF-8">
-      <directory>.idea/libraries</directory>
+      <directory>src/test/resources</directory>
       <includes>
-        <include>**/*.xml</include>
+        <include>**/*.properties</include>
       </includes>
     </fileSet>
     <fileSet filtered="true" encoding="UTF-8">
-      <directory>.idea</directory>
+      <directory></directory>
       <includes>
-        <include>**/*.xml</include>
-      </includes>
-    </fileSet>
-    <fileSet filtered="true" encoding="UTF-8">
-      <directory>.idea/artifacts</directory>
-      <includes>
-        <include>**/*.xml</include>
-      </includes>
-    </fileSet>
-    <fileSet filtered="true" encoding="UTF-8">
-      <directory>.idea/copyright</directory>
-      <includes>
-        <include>**/*.xml</include>
-      </includes>
-    </fileSet>
-    <fileSet encoding="UTF-8">
-      <directory>.idea</directory>
-      <includes>
-        <include>**/*.name</include>
+        <include>.gitignore</include>
+        <include>README.md</include>
       </includes>
     </fileSet>
     <fileSet encoding="UTF-8">
       <directory></directory>
       <includes>
-        <include>.gitignore</include>
-        <include>vaadinspringmodel.iml</include>
         <include>mvnw.cmd</include>
-        <include>README.md</include>
         <include>mvnw</include>
       </includes>
     </fileSet>

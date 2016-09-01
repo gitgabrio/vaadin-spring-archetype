@@ -1,4 +1,6 @@
-# Created by .ignore support plugin (hsz.mobi)
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
 ### Java template
 *.class
 
@@ -153,10 +155,10 @@ buildNumber.properties
 /target/
 /.mvn/
 /.idea/
-/VaadinSpringTemplate.iml
-/src/main/webapp/VAADIN/gwt-unitCache/*
-/src/main/webapp/VAADIN/widgetsets/net.cardosi.vaadinspringmodel.VaadinSpringModelWidgetset/
-/src/main/webapp/VAADIN/widgetsets/WEB-INF/deploy/net.cardosi.vaadinspringmodel.VaadinSpringModelWidgetset/
-src/main/webapp/VAADIN/widgetsets/WEB-INF/deploy/net.cardosi.vaadinspringmodel.VaadinSpringModelWidgetset/
-src/main/webapp/VAADIN/widgetsets/net.cardosi.vaadinspringmodel.VaadinSpringModelWidgetset/
-/vaadinspringmodel.iml
+/${artifactId}.iml
+/.idea/
+
+/src/main/webapp/VAADIN/gwt-unitCache/
+/src/main/webapp/VAADIN/widgetsets/
+
+

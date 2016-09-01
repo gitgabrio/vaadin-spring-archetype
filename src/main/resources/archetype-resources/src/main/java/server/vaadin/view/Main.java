@@ -26,7 +26,7 @@ import javax.annotation.PostConstruct;
  * The type <code>Main</code>.
  */
 @Theme("mytheme")
-@Widgetset("${package}.VaadinSpringModelWidgetset")
+@Widgetset("${package}.${artifactId}Widgetset")
 @SpringUI()
 public class Main extends UI implements CustomerLoginEvent.CustomerLoginHandler, CustomerLogoutEvent.CustomerLogoutHandler {
 

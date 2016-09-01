@@ -8,12 +8,14 @@ This archetype will create a simple Vaadin + Spring project. The generated appli
 Generated project characteristics
 ---------------------------------
 
-No-xml Spring MVC 4 web application
+No-xml Spring 4 web application
+
 Vaadin 7.6.3
 
 Prerequisites
 -------------
     JDK 7+
+    
     Maven 3
 
 Create a project
@@ -23,7 +25,7 @@ Create a project
         -DarchetypeArtifactId=vaadin-spring-archetype \
         -DarchetypeVersion=1.0.0 \
         -DgroupId=my.groupid \
-        -DartifactId=my-artifactId \
+        -DartifactId=MyArtifactId \
         -Dversion=version \
         -DarchetypeRepository=http://gitgabrio.github.io/vaadin-spring-archetype
 
@@ -39,7 +41,7 @@ Navigate to newly created project directory (my-artifactId) and then run:
 Test in the browser
 -------------------
 
-http://localhost:8080/my-artifactId
+http://localhost:8080/MyArtifactId
 
 Implementation details
 ----------------------

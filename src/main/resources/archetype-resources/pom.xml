@@ -5,16 +5,8 @@
     <groupId>${groupId}</groupId>
     <artifactId>${artifactId}</artifactId>
     <version>${version}</version>
-    <name>Vaadin Spring Model</name>
-    <description>Vaadin + Spring Single Page application</description>
+    <name>${artifactId}</name>
     <packaging>war</packaging>
-
-    <developers>
-        <developer>
-            <name>Gabriele Cardosi</name>
-            <email>gabriele.cardosi@gmail.com</email>
-        </developer>
-    </developers>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -38,30 +30,17 @@
         <maven-surefire-plugin.version>2.19.1</maven-surefire-plugin.version>
         <jetty-maven-plugin.version>8.1.16.v20140903</jetty-maven-plugin.version>
         <!-- CONFIGURATIONs -->
-        <!--<gwt.port>8080</gwt.port>-->
-        <!--<gwt.debug.port>8000</gwt.debug.port>-->
-        <!--<gwt.compiler.precompile>true</gwt.compiler.precompile>-->
-        <!--<gwt.compiler.localWorkers>3</gwt.compiler.localWorkers>-->
-        <!--<gwt.compiler.style>PRETTY</gwt.compiler.style>-->
-        <!--<gwt.compiler.optimizationLevel>3</gwt.compiler.optimizationLevel>-->
-        <!--<gwt.compiler.logLevel>WARN</gwt.compiler.logLevel>-->
-        <!--<gwt.compiler.disableCastChecking>false</gwt.compiler.disableCastChecking>-->
-        <!--<gwt.compiler.disableClassMetadata>false</gwt.compiler.disableClassMetadata>-->
-        <!--<gwt.compiler.bindAddress>0.0.0.0</gwt.compiler.bindAddress>-->
-        <!--<gwt.noserver>true</gwt.noserver>       &lt;!&ndash; set true to use remote tomcat instead of internal  Jetty &ndash;&gt;-->
-        <!--<gwt.target>/GWTSpringModel/index.html</gwt.target>-->
         <maven-compiler.source>1.7</maven-compiler.source>
         <maven-compiler.target>1.7</maven-compiler.target>
     </properties>
 
     <dependencies>
-
+        <!-- Vaadin DEPENDENCIES -->
         <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-spring</artifactId>
             <version>${vaadin-spring.framework.version}</version>
         </dependency>
-
         <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-server</artifactId>
@@ -98,40 +77,10 @@
             <artifactId>vaadin-themes</artifactId>
             <version>${vaadin.version}</version>
         </dependency>
-
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>${guava.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-jdbc</artifactId>
-            <version>${spring.framework.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-test</artifactId>
-            <version>${spring.framework.version}</version>
-        </dependency>
-
+        <!-- Spring -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>${spring.framework.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-aop</artifactId>
             <version>${spring.framework.version}</version>
         </dependency>
         <dependency>
@@ -144,50 +93,30 @@
             <artifactId>spring-beans</artifactId>
             <version>${spring.framework.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-orm</artifactId>
-            <version>${spring.framework.version}</version>
-        </dependency>
-        <!-- AspectJ dependencies -->
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjrt</artifactId>
-            <version>${aspectj.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjweaver</artifactId>
-            <version>${aspectj.version}</version>
-        </dependency>
-
+        <!-- Other -->
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
             <version>${log4j.version}</version>
         </dependency>
-
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>${javax.servlet.version}</version>
             <scope>provided</scope>
         </dependency>
-
+        <!-- Test -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring.framework.version}</version>
+        </dependency>
     </dependencies>
-
-    <!--<dependencyManagement>-->
-    <!--<dependencies>-->
-    <!--&lt;!&ndash;<dependency>&ndash;&gt;-->
-    <!--&lt;!&ndash;<groupId>com.vaadin</groupId>&ndash;&gt;-->
-    <!--&lt;!&ndash;<artifactId>vaadin-bom</artifactId>&ndash;&gt;-->
-    <!--&lt;!&ndash;<version>${vaadin.version}</version>&ndash;&gt;-->
-    <!--&lt;!&ndash;<type>pom</type>&ndash;&gt;-->
-    <!--&lt;!&ndash;<scope>import</scope>&ndash;&gt;-->
-    <!--&lt;!&ndash;</dependency>&ndash;&gt;-->
-
-    <!--</dependencies>-->
-    <!--</dependencyManagement>-->
 
     <build>
         <!-- Output classes directly into the webapp, so that IDEs and "mvn process-classes" update them in DevMode -->
@@ -226,21 +155,6 @@
                 <groupId>org.apache.tomcat.maven</groupId>
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <version>${tomcat-maven-plugin.version}</version>
-                <!--<configuration>
-                    &lt;!&ndash; add the security credentials to ~/.m2/settings.xml <id>...</id> &ndash;&gt;
-                    <server>maven-tomcat</server>
-                    <path>${tomcat.path}</path>
-                    <url>${tomcat.server.url}</url>
-                    <update>true</update>
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>deploy</phase>
-                        <goals>
-                            <goal>deploy</goal>
-                        </goals>
-                    </execution>
-                </executions>-->
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -258,7 +172,7 @@
                 <version>${maven-war-plugin.version}</version>
                 <configuration>
                     <warSourceDirectory>src/main/webapp</warSourceDirectory>
-                    <warName>VaadinSpringModel</warName>
+                    <warName>${artifactId}</warName>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
@@ -313,6 +227,4 @@
             </plugin>
         </plugins>
     </build>
-
-
 </project>

@@ -7,10 +7,7 @@ import com.vaadin.spring.annotation.EnableVaadin;
 import ${package}.server.service.AuthenticationService;
 import ${package}.server.vaadin.eventbus.EventBus;
 import ${package}.server.vaadin.view.login.LoginView;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
-import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.*;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 /**
@@ -19,6 +16,7 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 @Configuration
 @EnableVaadin
 @PropertySource("classpath:application.properties")
+@ComponentScan("${package}.server")
 public class Config {
 
 
