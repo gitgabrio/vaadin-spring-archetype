@@ -1,6 +1,0 @@
-{
-  "name": "Vaadin-spring-archetype",
-  "tagline": "MAVEN archetype to generate a Vaadin + Spring project",
-  "body": "### Authors and Contributors\r\nGabriele Cardosi (@gitgabrio)\r\n\r\n### Support or Contact\r\ngabriele.cardosi@gmail.com\r\n",
-  "note": "Don't delete this file! It's used internally to help with page regeneration."
-}
