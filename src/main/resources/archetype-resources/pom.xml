@@ -20,7 +20,7 @@
         <aspectj.version>1.8.9</aspectj.version>
         <javax.servlet.version>3.1.0</javax.servlet.version>
         <!-- TEST -->
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <!-- PLUGINS -->
         <maven-compiler-plugin.version>3.1</maven-compiler-plugin.version>
         <maven-war-plugin.version>2.4</maven-war-plugin.version>
